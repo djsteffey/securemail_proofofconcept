@@ -24,8 +24,8 @@ public class SecureMail {
     // methods
     public SecureMail() throws Exception{
         // set username and password
-        this.m_username = "djsteffey@gmail.com";
-        this.m_password = "dhxtkzktlgsddmne";
+        this.m_username = "****";
+        this.m_password = "****";
 
         // generate keys
         if (this.generateKeys() == false){
@@ -87,8 +87,8 @@ public class SecureMail {
     }
 
     private boolean sendTestMessage(){
-        String to = "djsteffey@gmail.com";
-        String from = "djsteffey@gmail.com";
+        String to = "****";
+        String from = "****";
         String host = "smtp.gmail.com";
 
         Properties properties = System.getProperties();
@@ -99,7 +99,7 @@ public class SecureMail {
 
         Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("djsteffey@gmail.com", "dhxtkzktlgsddmne");
+                return new PasswordAuthentication("****", "****");
             }
         });
 
