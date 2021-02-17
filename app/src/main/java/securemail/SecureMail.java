@@ -124,7 +124,7 @@ public class SecureMail {
 
             // open the store
             Store store = session.getStore("imaps");
-            store.connect("imap.googlemail.com", 993, "djsteffey@gmail.com", "dhxtkzktlgsddmne");
+            store.connect("imap.googlemail.com", 993, "****", "****");
 
             // get the inbox folder
             Folder inbox = store.getFolder("INBOX");
@@ -162,9 +162,9 @@ public class SecureMail {
     
     static void sendMail(){
         // Mention the Recipient's email address
-        String to = "djsteffey@gmail.com";
+        String to = "****";
         // Mention the Sender's email address
-        String from = "djsteffey@gmail.com";
+        String from = "****";
         // Mention the SMTP server address. Below Gmail's SMTP server is being used to send email
         String host = "smtp.gmail.com";
         // Get system properties
@@ -177,7 +177,7 @@ public class SecureMail {
         // Get the Session object.// and pass username and password
         Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("djsteffey@gmail.com", "dhxtkzktlgsddmne");
+                return new PasswordAuthentication("****", "****");
             }
         });
         // Used to debug SMTP issues
